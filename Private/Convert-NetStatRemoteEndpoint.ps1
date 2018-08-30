@@ -30,7 +30,7 @@ function Convert-NetStatRemoteEndpoint
 
     Write-Verbose -Message 'Formatting RemoteEndPoint Address'
 
-    if ($Address -eq '127.0.0.1' -or '0.0.0.0')
+    if ($Address -eq '127.0.0.1' -or $Address -eq '0.0.0.0')
     {
         $endpointName = "$($env:COMPUTERNAME)"
     }
